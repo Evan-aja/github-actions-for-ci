@@ -1,5 +1,14 @@
-name: Workflow nya jadi yeayyyy
 on: pull_request_review
+name: Workflow nya jadi yeayyyy
 jobs:
   labelWhenApproved:
+    name: Kalau diterima label aja
     runs-on: ubuntu-latest
+    steps:
+    - name: Kalau diterima label aja
+      uses: pullreminders/label-when-approved-action@master
+      env:
+        APPROVALS: "2"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ADD_LABEL: "approved"
+        REMOVE_LABEL: "awaiting%20review"
