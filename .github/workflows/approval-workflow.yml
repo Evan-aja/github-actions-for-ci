@@ -1,1 +1,2 @@
 name: Workflow nya jadi yeayyyy
+on: pull_request_review
